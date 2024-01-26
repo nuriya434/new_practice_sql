@@ -55,6 +55,8 @@ CREATE TABLE settings (
 
 );
 
+ALTER TABLE students ADD CONSTRAINT chk_gender CHECK (GENDER IN ('Male', 'Female'));
+ALTER TABLE teachers ADD CONSTRAINT chk_gender CHECK (GENDER IN ('Male', 'Female'));
 
 insert into accounts (id, created_at, updated_at) values (1, '2024-01-26 02:40:00', '2024-01-26 11:58:00');
 insert into accounts (id, created_at, updated_at) values (2, '2024-01-26 14:54:00', '2024-01-26 05:32:00');
